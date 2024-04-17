@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.color-box:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.color-box span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.color-box:nth-child(1) {
+    background-color: {{ hex_colors[0] }};
+}
+
+.color-box:nth-child(1) span {
+    color: {{ rgb_colors[0] }};
+}
+
+.color-box:nth-child(2) {
+    background-color: {{ hex_colors[1] }};
+}
+
+.color-box:nth-child(2) span {
+    color: {{ rgb_colors[1] }};
+}
+
+.color-box:nth-child(3) {
+    background-color: {{ hex_colors[2] }};
+}
+
+.color-box:nth-child(3) span {
+    color: {{ rgb_colors[2] }};
+}
+
+.color-box:nth-child(4) {
+    background-color: {{ hex_colors[3] }};
+}
+
+.color-box:nth-child(4) span {
+    color: {{ rgb_colors[3] }};
+}
+
+.color-box:nth-child(5) {
+    background-color: {{ hex_colors[4] }};
+}
+
+.color-box:nth-child(5) span {
+    color: {{ rgb_colors[4] }};
+}
